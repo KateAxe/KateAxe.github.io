@@ -1,0 +1,129 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+html
+
+body
+	font-size: 16px
+	min-width: 320px
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	overflow-y: scroll
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+img
+	width: 100%
+	height: 100%
+h2 
+	margin-top: 12%
+header, section
+	position: relative
+	z-index: 0
+	min-height: 100vh
+	font-size: 22px
+.sub
+	position: absolute
+	right: 0
+	bottom: 0
+	transform: rotate(90deg) translate(-50%,-50%)
+	line-height: 33px
+	font-size: 30px
+	font-weight: bold
+	z-index: -1
+.sup
+	line-height: 33px
+	position: absolute
+	right: 0
+	top: 70px
+	transform: rotate(90deg) translate(-50%,-50%)
+	line-height: 30px
+	font-size: 30px
+	font-weight: bold
+	z-index: -1
+header
+	position: relative
+	padding: 20% 0 5%
+	background-color: #f49b4d
+	.sub
+		color: #da705b
+.section1
+	background: #da705b
+	padding: 10% 0 5%
+	.sup
+		color: #f49b4d
+	.sub
+		right: 20px
+		bottom: -10px
+		color: #1aa6bf
+.section2
+	background-color: #1aa6bf
+	padding: 10% 0 5%
+	.sup
+		right: 20px
+		top: 30px
+		color: #da705b
+	.sub
+		right: 20px
+		bottom: -10px
+		color: #c270cf
+.section3
+	background-color: #62d271
+	background: #fff url(../img/Занят.jpg) center center no-repeat
+	background-size: cover
+	.col-md-5
+		margin-top: -800px
+		img
+			height: 45%
+	p
+		margin-top: 25%
+		font-size: 30px
+		font-weight: 900
+		span
+	.row::after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		width: 100%
+		height: 100%
+		background: rgba(0, 0, 0, 0.6)
+		z-index: -1
+	.sup
+		right: 10px
+		top: 60px
+		color: #c270cf
+
+
+
+
+
+@import "media" // Always at the end
